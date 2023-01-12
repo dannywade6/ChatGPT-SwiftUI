@@ -11,6 +11,8 @@
 		304CD10929701D6700D09C81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CD10829701D6700D09C81 /* ContentView.swift */; };
 		304CD10B29701D6800D09C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304CD10A29701D6800D09C81 /* Assets.xcassets */; };
 		304CD10E29701D6800D09C81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304CD10D29701D6800D09C81 /* Preview Assets.xcassets */; };
+		304CD11629701DE000D09C81 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 304CD11529701DE000D09C81 /* OpenAISwift */; };
+		304CD11829707B8F00D09C81 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CD11729707B8F00D09C81 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		304CD10829701D6700D09C81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		304CD10A29701D6800D09C81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		304CD10D29701D6800D09C81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		304CD11729707B8F00D09C81 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304CD11629701DE000D09C81 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				304CD10629701D6700D09C81 /* ChatGPTApp.swift */,
 				304CD10829701D6700D09C81 /* ContentView.swift */,
+				304CD11729707B8F00D09C81 /* ViewModel.swift */,
 				304CD10A29701D6800D09C81 /* Assets.xcassets */,
 				304CD10C29701D6800D09C81 /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = ChatGPT;
+			packageProductDependencies = (
+				304CD11529701DE000D09C81 /* OpenAISwift */,
+			);
 			productName = ChatGPT;
 			productReference = 304CD10329701D6700D09C81 /* ChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 304CD0FA29701D6700D09C81;
+			packageReferences = (
+				304CD11429701DDF00D09C81 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 304CD10429701D6700D09C81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				304CD10929701D6700D09C81 /* ContentView.swift in Sources */,
+				304CD11829707B8F00D09C81 /* ViewModel.swift in Sources */,
 				304CD10729701D6700D09C81 /* ChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		304CD11429701DDF00D09C81 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		304CD11529701DE000D09C81 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 304CD11429701DDF00D09C81 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 304CD0FB29701D6700D09C81 /* Project object */;
 }
